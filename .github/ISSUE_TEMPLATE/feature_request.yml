@@ -1,0 +1,36 @@
+name: Feature request
+description: Propose a useful product or engineering improvement
+title: "[Feature] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the user or engineering problem before proposing the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the simplest useful solution you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Expected value
+      description: Who benefits and how will we know this is useful?
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks or constraints
+      description: Note privacy, security, data, compatibility, cost or release concerns if relevant.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional alternatives or simpler approaches.
