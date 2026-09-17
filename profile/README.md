@@ -13,6 +13,14 @@ A private, offline-capable activity journal and community for mushroom foragers.
 - Website: https://grzybolaz.pl
 - Product: https://app.grzybolaz.pl
 
+### Dymistrz
+
+A digital companion for people who treat home smoking as a craft — helping plan sessions, record the process, keep history and repeat what works.
+
+- Status: build & validation
+
+Future concepts remain in the Adalbird Labs incubator until they pass the relevant portfolio stage gates.
+
 ## How we build
 
 - **Problem first** — start with a real need, not a feature list.
