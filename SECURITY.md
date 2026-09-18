@@ -2,6 +2,8 @@
 
 Security and privacy issues should be reported privately.
 
+Canonical public security contact: https://adalbirdlabs.com/.well-known/security.txt
+
 ## Reporting a vulnerability
 
 Please email **contact@adalbirdlabs.com** with:
