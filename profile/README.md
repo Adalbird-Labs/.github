@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://adalbirdlabs.com/assets/brand/adalbird-labs.png" alt="Adalbird Labs logo" width="180" />
+</p>
+
 # Adalbird Labs
 
 **Independent product lab building focused digital products that solve real-world problems simply.**
@@ -33,6 +37,8 @@ Future concepts remain in the Adalbird Labs incubator until they pass the releva
 
 - Website: https://adalbirdlabs.com
 - Email: contact@adalbirdlabs.com
+- Phone: +48 720 309 298
+- Security reports: https://adalbirdlabs.com/.well-known/security.txt
 
 ---
 
