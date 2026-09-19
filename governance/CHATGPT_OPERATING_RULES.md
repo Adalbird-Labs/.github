@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.3  
+**Version:** 1.4  
 **Last updated:** 2026-09-19  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -112,7 +112,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
 | GitHub Actions | CI/CD and workflow evidence | Read/support actions available through GitHub connection where supported | Not inherently | Use direct GitHub capabilities first. |
-| PostHog | Product analytics/evidence | **Yes, via the PostHog ChatGPT plugin once Wojtek installs/connects it** | No for supported plugin reads/actions; browser/repo work only where materially needed | PostHog plugin is available in ChatGPT but is not yet installed/connected. Connection requires Wojtek’s explicit action. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
+| PostHog | Product analytics/evidence | Plugin is connected, but **not currently authorized for Adalbird Labs use because the active workspace/account identity does not match Adalbird Labs** | No once a valid Adalbird Labs workspace is connected; browser/repo work only where materially needed | Do not read/write PostHog customer/project data until the active organization/project identity is explicitly validated as Adalbird Labs. Current connection must be reconnected/reselected. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
 | Sentry | Production observability | No dedicated ChatGPT plugin found as of 2026-09-19; public docs can be researched from Chat | Not inherently; use direct repository/API capabilities where available, Work only when browser/computer interaction materially helps | Free Developer plan is the default pilot target. No paid plan, PAYG, Seer trial/subscription or other charge-capable feature without explicit Wojtek approval. |
 
 **Rule:** never assume Work is required simply because a task touches a repository or external system. First use direct connected capabilities available in normal Chat. Work is for tasks where browser/computer/local execution is actually necessary or materially more effective.
@@ -150,6 +150,8 @@ Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary
 Prefer **Problem → Evidence → Options → Recommendation → Required decision**. Do not manufacture a decision request when existing authority already permits action.
 
 ## 17. Security, privacy and external commitments
+
+**Connector identity validation:** after installing/connecting any external plugin, connector, workspace or account, verify the active organization/workspace/project/account identity before reading or writing operational data. If the connected identity is unexpected, belongs to another organization/person, or cannot be verified, stop using that connector for company data and record the blocker. Do not inspect unrelated third-party data merely to diagnose the mismatch.
 
 Never store passwords, private keys, API secrets/tokens, recovery codes, sensitive personal data or production credentials in repositories/docs. Use proper secret management and minimum necessary data.
 
@@ -193,6 +195,10 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.4 — 2026-09-19
+- Added mandatory connector identity validation before any operational read/write after installing or connecting an external plugin/workspace/account.
+- Recorded the current PostHog plugin connection as unusable for Adalbird Labs because the active environment identity does not match Adalbird Labs; no unrelated PostHog project data should be inspected.
 
 ### v1.3 — 2026-09-19
 - Updated the Systems & Direct-Access Registry after plugin discovery: PostHog has a dedicated ChatGPT plugin available for direct product-analytics access once Wojtek explicitly installs/connects it.
