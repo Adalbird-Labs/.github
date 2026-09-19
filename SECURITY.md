@@ -6,7 +6,7 @@ Canonical public security contact: https://adalbirdlabs.com/.well-known/security
 
 ## Reporting a vulnerability
 
-Please email **contact@adalbirdlabs.com** with:
+Please email **security@adalbirdlabs.com** with:
 
 - the affected product or repository,
 - a clear description of the issue,
