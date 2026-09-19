@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.6  
+**Version:** 1.7  
 **Last updated:** 2026-09-19  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -110,6 +110,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | ChatGPT Work | Browser/computer/repository/file-heavy execution | Separate execution mode | N/A | Use only when it materially improves execution; do not use merely because available. |
 | ChatGPT Automations | Scheduled/recurring/condition-watch AI execution and reminders | Yes, when the automation capability is available and authorized | No | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
 | ChatGPT Plugins / Plugin Management | Discover/connect packaged external-system capabilities | Plugin discovery/status is directly usable; installation/connection always requires Wojtek’s explicit action | No for plugin discovery/connected tool use; browser only if a provider flow itself requires it | Validate the active tenant identity after connection and before operational use. A plugin connection is not permission to spend, create paid accounts or inspect unrelated data. |
+| Adalbird Physical Device Lab | Planned cross-product physical Android regression bridge (ADL-358) | Indirect direct-Chat control through GitHub once a restricted Windows self-hosted runner + ADB bridge is bootstrapped | **No** for normal runs; one-time local founder bootstrap is required before first use | PoC only until evidence supports GO. Start repo-scoped on private Grzybołaz, interactive runner, no PR-triggered self-hosted execution, no arbitrary issue-to-shell input, no production secrets. ADB + Maestro is the provisional stack; Appium is fallback. No paid device farm or cloud plan without Wojtek approval. |
 | Supabase | Product backend/data/auth/infrastructure | Capability depends on connected tools in current environment | Not inherently | Prefer direct connector/API when available; otherwise use appropriate execution mode. Spending Golden Rule always applies. |
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
@@ -201,6 +202,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.7 — 2026-09-19
+- Added the planned Adalbird Physical Device Lab pilot to the Systems & Direct-Access Registry after ADL-358 established a cross-product operational design.
+- Recorded the no-Work control path: Direct Chat → GitHub → restricted Windows self-hosted runner → ADB + Maestro → physical Android device → GitHub evidence.
+- Added the pilot security boundary: private repo scope first, interactive runner, no untrusted PR execution, no arbitrary issue text executed as shell, no production secrets and no paid device service without founder approval.
 
 ### v1.6 — 2026-09-19
 - Added ChatGPT Automations and ChatGPT Plugins / Plugin Management to the mandatory Systems & Direct-Access Registry.
