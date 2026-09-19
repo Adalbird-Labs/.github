@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.2  
+**Version:** 1.3  
 **Last updated:** 2026-09-19  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -112,8 +112,8 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
 | GitHub Actions | CI/CD and workflow evidence | Read/support actions available through GitHub connection where supported | Not inherently | Use direct GitHub capabilities first. |
-| PostHog | Planned product analytics/evidence | Not yet established | TBD | Free-tier-first pilot only; any potential charge requires explicit Wojtek approval. Add concrete access mode after integration. |
-| Sentry | Planned production observability | Not yet established | TBD | Free-tier-first pilot only; any potential charge requires explicit Wojtek approval. Add concrete access mode after integration. |
+| PostHog | Product analytics/evidence | **Yes, via the PostHog ChatGPT plugin once Wojtek installs/connects it** | No for supported plugin reads/actions; browser/repo work only where materially needed | PostHog plugin is available in ChatGPT but is not yet installed/connected. Connection requires Wojtek’s explicit action. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
+| Sentry | Production observability | No dedicated ChatGPT plugin found as of 2026-09-19; public docs can be researched from Chat | Not inherently; use direct repository/API capabilities where available, Work only when browser/computer interaction materially helps | Free Developer plan is the default pilot target. No paid plan, PAYG, Seer trial/subscription or other charge-capable feature without explicit Wojtek approval. |
 
 **Rule:** never assume Work is required simply because a task touches a repository or external system. First use direct connected capabilities available in normal Chat. Work is for tasks where browser/computer/local execution is actually necessary or materially more effective.
 
@@ -193,6 +193,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.3 — 2026-09-19
+- Updated the Systems & Direct-Access Registry after plugin discovery: PostHog has a dedicated ChatGPT plugin available for direct product-analytics access once Wojtek explicitly installs/connects it.
+- Recorded that no dedicated Sentry ChatGPT plugin was found in the current plugin directory; Sentry remains usable through repository/API/web workflows as available.
+- Reaffirmed that plugin/account connection does not authorize paid usage; all charge-capable PostHog/Sentry features remain founder-only under the Spend Golden Rule.
 
 ### v1.2 — 2026-09-19
 - Added Render to the mandatory Systems & Direct-Access Registry after confirming direct Chat access to services, deployments, logs, metrics and environment configuration.
