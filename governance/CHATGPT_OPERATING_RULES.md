@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.5  
+**Version:** 1.6  
 **Last updated:** 2026-09-19  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -108,6 +108,8 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | GitHub | Code, repository config, version-controlled docs, canonical AI rules | Yes, when connected | **No for supported repository/API actions** | Chat may read/create/update repository files directly. Use Work only when substantial local repo/computer execution materially helps. |
 | ChatGPT Projects | Conversation/project context and project instructions | Yes | No | Project instructions bootstrap this canonical file + local overlay. |
 | ChatGPT Work | Browser/computer/repository/file-heavy execution | Separate execution mode | N/A | Use only when it materially improves execution; do not use merely because available. |
+| ChatGPT Automations | Scheduled/recurring/condition-watch AI execution and reminders | Yes, when the automation capability is available and authorized | No | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
+| ChatGPT Plugins / Plugin Management | Discover/connect packaged external-system capabilities | Plugin discovery/status is directly usable; installation/connection always requires Wojtek’s explicit action | No for plugin discovery/connected tool use; browser only if a provider flow itself requires it | Validate the active tenant identity after connection and before operational use. A plugin connection is not permission to spend, create paid accounts or inspect unrelated data. |
 | Supabase | Product backend/data/auth/infrastructure | Capability depends on connected tools in current environment | Not inherently | Prefer direct connector/API when available; otherwise use appropriate execution mode. Spending Golden Rule always applies. |
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
@@ -199,6 +201,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.6 — 2026-09-19
+- Added ChatGPT Automations and ChatGPT Plugins / Plugin Management to the mandatory Systems & Direct-Access Registry.
+- Recorded that scheduled execution does not require Work, while plugin installation/connection remains a user action and connected tenants must pass identity validation before use.
+- Clarified that neither automation nor plugin connection grants spending authority or permission to inspect unrelated data.
 
 ### v1.5 — 2026-09-19
 - Reconciled the Systems & Direct-Access Registry with operational systems already in active use: Gmail, OVHcloud, Apple App Store Connect/Developer and Google Play Console.
