@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.10  
+**Version:** 1.11  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -133,8 +133,8 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Apple App Store Connect / Developer | Shared iOS distribution, developer/trader metadata and annual membership | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Membership/payment changes require Wojtek approval; legal seller identity must remain accurate. |
 | Google Play Console | Shared Android distribution, developer identity and store metadata | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Purchases/paid services require Wojtek approval; identity/support data must remain accurate. |
 | GitHub Actions | CI/CD and workflow evidence | Read/support actions available through GitHub connection where supported | Not inherently | Use direct GitHub capabilities first. |
-| PostHog | Product analytics/evidence | Plugin is connected, but **not currently authorized for Adalbird Labs use because the active workspace/account identity does not match Adalbird Labs** | No once a valid Adalbird Labs workspace is connected; browser/repo work only where materially needed | Do not read/write PostHog customer/project data until the active organization/project identity is explicitly validated as Adalbird Labs. Current connection must be reconnected/reselected. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
-| Sentry | Production observability | No dedicated ChatGPT plugin found as of 2026-09-19; public docs can be researched from Chat | Not inherently; use direct repository/API capabilities where available, Work only when browser/computer interaction materially helps | Free Developer plan is the default pilot target. No paid plan, PAYG, Seer trial/subscription or other charge-capable feature without explicit Wojtek approval. |
+| PostHog | Product analytics/evidence | Adalbird Labs EU tenant and Grzybołaz project are configured and the plugin has been re-authorized for EU, but **direct Chat use remains quarantined until the connector can positively verify the active tenant identity** | No once connector verification succeeds; browser/repo work only where materially needed | Founder setup is complete. Do not read/write operational PostHog customer/project data through Chat until active organization/project identity is verified as the Adalbird Labs EU tenant. Track the connector blocker in ADL-365. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
+| Sentry | Production observability | Adalbird Labs EU organization is configured; no dedicated ChatGPT plugin is currently available | Not inherently; use direct repository/API capabilities where available, Work only when browser/computer interaction materially helps | EU data residency is confirmed. Grzybołaz pilot is configured for React Native Error Monitoring only; no payment method is on file and Generative AI/Seer is disabled. Product implementation stays in product issues. No paid plan, PAYG, Seer subscription or other charge-capable feature without explicit Wojtek approval. |
 
 **Rule:** never assume Work is required simply because a task touches a repository or external system. First use direct connected capabilities available in normal Chat. Work is for tasks where browser/computer/local execution is actually necessary or materially more effective.
 
@@ -165,6 +165,20 @@ Prefer the simplest/cheapest reliable execution mode and respect Work limits.
 ## 15. Minimize Wojtek’s manual work
 
 Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary conversions and copy-paste; automate repetitive safe work; provide exact values/text when manual input is unavoidable; complete all authorized steps before handing work back. Do not delegate to Wojtek merely because describing a task is easier than executing it.
+
+## 15A. Needs Wojtek is an actionable-now queue
+
+The Linear label **`Needs Wojtek` means Wojtek can take a concrete useful action or decision now**. It must not mean “Wojtek will eventually be needed.”
+
+When an issue carrying `Needs Wojtek` becomes blocked by prior AI/technical/external work, another issue, an unavailable release candidate, or any prerequisite that prevents Wojtek from usefully acting now:
+
+1. remove `Needs Wojtek` from the blocked/downstream issue;
+2. keep the blocker/dependency explicit in Linear;
+3. place `Needs Wojtek` only on the currently actionable upstream issue when founder action is genuinely required there;
+4. re-add `Needs Wojtek` automatically when the blocker clears and a concrete founder action becomes immediately executable;
+5. avoid duplicating `Needs Wojtek` across parent/downstream issues for the same founder action.
+
+Founder priority reports must rank only the current actionable `Needs Wojtek` queue. Priority scoring should combine actual impact, leverage/unblocking of autonomous AI work, and Wojtek's execution time, with short actions (especially <=5 minutes) receiving a meaningful efficiency premium.
 
 ## 16. Escalation quality
 
@@ -216,6 +230,12 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.11 — 2026-09-20
+- Redefined `Needs Wojtek` as an actionable-now queue rather than an eventual founder-dependency marker.
+- Required temporary removal of `Needs Wojtek` when an upstream AI/technical/external prerequisite prevents useful founder action, with automatic re-addition once actionable.
+- Prohibited duplicate founder-action labeling on blocked parents/downstream issues and defined founder priority reports around impact, autonomous-work leverage and founder execution time.
+- Updated the Systems & Direct-Access Registry after founder setup of PostHog EU and Sentry EU: PostHog direct Chat access remains quarantined pending connector identity verification (ADL-365); Sentry EU is configured for a free-tier-first React Native Error Monitoring pilot with Seer/Generative AI disabled.
 
 ### v1.10 — 2026-09-20
 - Defined the Adalbird AI Runner as company-first rather than a general product-development runner.
