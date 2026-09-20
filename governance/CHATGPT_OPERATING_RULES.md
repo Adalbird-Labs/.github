@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.10  
+**Version:** 1.11  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -166,6 +166,20 @@ Prefer the simplest/cheapest reliable execution mode and respect Work limits.
 
 Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary conversions and copy-paste; automate repetitive safe work; provide exact values/text when manual input is unavoidable; complete all authorized steps before handing work back. Do not delegate to Wojtek merely because describing a task is easier than executing it.
 
+## 15A. Needs Wojtek is an actionable-now queue
+
+The Linear label **`Needs Wojtek` means Wojtek can take a concrete useful action or decision now**. It must not mean “Wojtek will eventually be needed.”
+
+When an issue carrying `Needs Wojtek` becomes blocked by prior AI/technical/external work, another issue, an unavailable release candidate, or any prerequisite that prevents Wojtek from usefully acting now:
+
+1. remove `Needs Wojtek` from the blocked/downstream issue;
+2. keep the blocker/dependency explicit in Linear;
+3. place `Needs Wojtek` only on the currently actionable upstream issue when founder action is genuinely required there;
+4. re-add `Needs Wojtek` automatically when the blocker clears and a concrete founder action becomes immediately executable;
+5. avoid duplicating `Needs Wojtek` across parent/downstream issues for the same founder action.
+
+Founder priority reports must rank only the current actionable `Needs Wojtek` queue. Priority scoring should combine actual impact, leverage/unblocking of autonomous AI work, and Wojtek's execution time, with short actions (especially <=5 minutes) receiving a meaningful efficiency premium.
+
 ## 16. Escalation quality
 
 Prefer **Problem → Evidence → Options → Recommendation → Required decision**. Do not manufacture a decision request when existing authority already permits action.
@@ -216,6 +230,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.11 — 2026-09-20
+- Redefined `Needs Wojtek` as an actionable-now queue rather than an eventual founder-dependency marker.
+- Required temporary removal of `Needs Wojtek` when an upstream AI/technical/external prerequisite prevents useful founder action, with automatic re-addition once actionable.
+- Prohibited duplicate founder-action labeling on blocked parents/downstream issues and defined founder priority reports around impact, autonomous-work leverage and founder execution time.
 
 ### v1.10 — 2026-09-20
 - Defined the Adalbird AI Runner as company-first rather than a general product-development runner.
