@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.15  
+**Version:** 1.16  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -168,7 +168,7 @@ Prefer the simplest/cheapest reliable execution mode and respect Work limits.
 
 Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary conversions and copy-paste; automate repetitive safe work; provide exact values/text when manual input is unavoidable; complete all authorized steps before handing work back. Do not delegate to Wojtek merely because describing a task is easier than executing it.
 
-**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
+**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. **Before adding `Needs Wojtek` to any issue, estimate Wojtek's active time and show the estimate to Wojtek in the same turn; only then add the issue to the queue.** Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
 
 ## 16. Escalation quality
 
@@ -232,6 +232,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.16 — 2026-09-20
+- Before adding any issue to `Needs Wojtek`, require an explicit founder active-time estimate and show that estimate to Wojtek in the same turn.
+- Preserve the XS–XXXL T-shirt scale as the queue's founder-time convention.
+
 
 ### v1.15 — 2026-09-20
 - Added cost-aware CI execution for AI-native development: fast Verify for small iterations and heavier platform suites at coherent checkpoints/release gates.
