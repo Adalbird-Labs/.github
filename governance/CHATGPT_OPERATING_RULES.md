@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.8  
-**Last updated:** 2026-09-19  
+**Version:** 1.9  
+**Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -110,7 +110,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | ChatGPT Work | Browser/computer/repository/file-heavy execution | Separate execution mode | N/A | Use only when it materially improves execution; do not use merely because available. |
 | ChatGPT Automations | Scheduled/recurring/condition-watch AI execution and reminders | Yes, when the automation capability is available and authorized | No | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
 | ChatGPT Plugins / Plugin Management | Discover/connect packaged external-system capabilities | Plugin discovery/status is directly usable; installation/connection always requires Wojtek’s explicit action | No for plugin discovery/connected tool use; browser only if a provider flow itself requires it | Validate the active tenant identity after connection and before operational use. A plugin connection is not permission to spend, create paid accounts or inspect unrelated data. |
-| Adalbird Physical Device Lab | Planned cross-product physical Android regression bridge (ADL-358), initially Samsung Galaxy S10 + Samsung Galaxy S25 Ultra | Indirect direct-Chat control through GitHub once a restricted Windows self-hosted runner + ADB bridge is bootstrapped | **No** for normal runs; one-time local runner bootstrap plus one-time ADB authorization/alias registration per physical device | PoC only until evidence supports GO. Start repo-scoped on private Grzybołaz, interactive runner, no PR-triggered self-hosted execution, no arbitrary issue-to-shell input, no production secrets. Use stable local aliases (`s10`, `s25-ultra`) and explicit ADB/Maestro device selection; fail closed on ambiguity. Raw device serials stay local. Start sequential across devices; parallel/sharded execution only after data isolation and deterministic single-device evidence. No factory reset of non-dedicated devices. ADB + Maestro is the provisional stack; Appium is fallback. No paid device farm or cloud plan without Wojtek approval. |
+| Adalbird Physical Device Lab | Operational cross-product physical Android regression bridge PoC (ADL-358), initially Samsung Galaxy S10 + Samsung Galaxy S25 Ultra | **Yes for registered online devices** through Direct Chat → GitHub → restricted Windows self-hosted runner → local alias resolver → ADB/Maestro. S10 registration and independent diagnostics are proven; S25 Ultra still needs its one-time local bootstrap. | **No** for normal runs on an onboarded device; one-time local runner bootstrap plus one-time ADB/RSA authorization and alias registration per physical device | S10 direct-control gate passed on 2026-09-20: autonomous registration and diagnostics both succeeded with non-sensitive GitHub evidence. Keep the runner repo-scoped on private Grzybołaz and interactive during PoC; no PR-triggered self-hosted execution, no arbitrary issue-to-shell input, no production secrets. Use stable local aliases (`s10`, `s25-ultra`) and explicit ADB/Maestro targeting; fail closed on ambiguity. Raw serials stay local. Start sequential across devices; parallel/sharded execution only after data isolation and deterministic single-device evidence. No factory reset of non-dedicated devices. ADB + Maestro remains provisional; Appium is fallback. No paid device farm or cloud plan without Wojtek approval. |
 | Supabase | Product backend/data/auth/infrastructure | Capability depends on connected tools in current environment | Not inherently | Prefer direct connector/API when available; otherwise use appropriate execution mode. Spending Golden Rule always applies. |
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
@@ -202,6 +202,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.9 — 2026-09-20
+- Promoted Adalbird Physical Device Lab from planned bridge to proven direct-Chat PoC capability for the registered Samsung Galaxy S10.
+- Recorded successful autonomous S10 registration and independent diagnostics through Direct Chat → GitHub → restricted Windows self-hosted runner → ADB, with raw serial containment and non-sensitive evidence artifacts.
+- Clarified that normal runs on an onboarded device no longer require Work or founder phone interaction; S25 Ultra still requires its one-time local ADB/RSA + alias onboarding.
 
 ### v1.8 — 2026-09-20
 - Expanded Adalbird Physical Device Lab from a single S10 PoC to an explicit multi-device Android design covering Samsung Galaxy S10 and Samsung Galaxy S25 Ultra.
