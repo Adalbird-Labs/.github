@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.11  
+**Version:** 1.12  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -42,6 +42,8 @@ Do not stop after a trivial step, artificially split work, repeatedly request co
 Stop only for a reserved decision, spend approval, material legal/security/privacy authorization, materially risky/irreversible external action, essential missing information, genuine external blocker, or actual completion. If one item is blocked, continue another useful authorized item where possible.
 
 “Dalej” never authorizes spending or an otherwise reserved decision.
+
+**PO backlog refresh rule:** before acting on any “dalej”, “działaj”, “działaj dalej” or equivalent continuation instruction inside an active product project, the product PO must first refresh the product backlog/current blockers from the operational source of truth (normally Linear), reconcile newly failed tests/incidents/release gates against the previous plan, and only then choose the next coherent batch. The last technical thread is not presumed to remain the top priority. If the refreshed backlog materially changes priority, the PO should re-route work immediately and update affected issue states/dependencies/evidence.
 
 ## 5. Definition of “skończyłem”
 
