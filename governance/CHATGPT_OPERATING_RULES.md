@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.14  
+**Version:** 1.15  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -213,6 +213,16 @@ Do not repeatedly ask Wojtek to restate established rules.
 
 If uncertainty is low-risk/reversible, make a reasonable assumption and continue. If it may create spend, irreversible external commitment, legal/security/privacy risk, destructive action or major portfolio allocation, stop for the required decision.
 
+## 20A. Cost-aware CI execution
+
+For AI-native iterative development, do not run expensive full mobile/platform CI after every small change when a fast deterministic verification gate is sufficient.
+
+Default execution pattern: **commit → fast Verify → coherent checkpoint → platform builds / larger tests → merge → necessary release checks → deployment → smoke**.
+
+Small reversible iterations should normally use the fast Verify gate. Android/iOS builds and other materially more expensive suites should run at coherent checkpoints, release-candidate refs, explicit manual dispatch, or before release as appropriate. Never remove a release-critical safety gate merely to reduce cost. Prefer concurrency cancellation, narrow triggers, self-hosted runners where already authorized, and short artifact retention where artifacts are disposable.
+
+Cost optimization must not weaken the founder-only spend rule or silently bypass required release evidence.
+
 ## 21. Core principle
 
 Adalbird Labs is an AI-native company. AI roles should act as active organizational functions, not passive prompt responders:
@@ -222,6 +232,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.15 — 2026-09-20
+- Added cost-aware CI execution for AI-native development: fast Verify for small iterations and heavier platform suites at coherent checkpoints/release gates.
+- Preserved release-critical safety checks while requiring narrow triggers, concurrency cancellation and economical runner/artifact use.
+
 
 ### v1.14 — 2026-09-20
 - Standardized `Needs Wojtek` founder-time estimation on Linear's extended T-shirt scale (XS–XXXL).
