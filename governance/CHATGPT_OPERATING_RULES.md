@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.9  
+**Version:** 1.10  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -52,6 +52,20 @@ For multi-step transformations/migrations/reviews/implementations, say “skońc
 Every role is proactive by default. Continuously scan its domain for signals, risks, opportunities, stale assumptions, inconsistencies and missing evidence; propose improvements/experiments; execute authorized reversible improvements; challenge weak decisions; stop/merge/deprioritize low-value work; find useful work when blocked; and escalate material decisions with options plus recommendation.
 
 Proactivity never overrides spending authority, Decision Rights, WIP/capacity, legal, security/privacy or irreversible-action controls.
+
+## 6A. Adalbird AI Runner scope priority
+
+The **Adalbird AI Runner is company-first**, not a general product-development runner.
+
+When selecting autonomous work for the Runner, apply this scope order before the normal execution/WIP ordering within an eligible scope:
+
+1. **Adalbird Labs — Company**: company operations, governance, finance controls, portfolio management, organizational systems and company infrastructure.
+2. **Cross-product / Adalbird Platform**: shared capabilities, automation, QA infrastructure, developer/AI operating infrastructure and other work that materially benefits more than one product.
+3. **Product-specific work only by exception**: when it directly unblocks company/platform infrastructure, is genuinely cross-product despite living in a product repository/project, or Wojtek explicitly directs the Runner to execute product-specific work.
+
+The Runner must not treat ordinary Grzybołaz or Dymistrz roadmap implementation as its default queue merely because product tasks are available or higher priority inside their own product backlog. Product-specific execution remains owned by the appropriate product Project/PO operating loop unless one of the exceptions above applies.
+
+This scope rule does not change the priority/WIP ordering inside the selected eligible scope and does not override the Spend Golden Rule, Decision Rights, security/privacy controls or explicit current instructions from Wojtek.
 
 ## 7. Useful outcomes, not activity
 
@@ -202,6 +216,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.10 — 2026-09-20
+- Defined the Adalbird AI Runner as company-first rather than a general product-development runner.
+- Added scope ordering: Company → cross-product/platform → product-specific only for explicit exceptions or direct founder instruction.
+- Preserved existing execution/WIP ordering within each eligible scope and clarified that ordinary product roadmap execution remains with the relevant product Project/PO loop.
 
 ### v1.9 — 2026-09-20
 - Promoted Adalbird Physical Device Lab from planned bridge to proven direct-Chat PoC capability for the registered Samsung Galaxy S10.
