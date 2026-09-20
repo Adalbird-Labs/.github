@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.19  
+**Version:** 1.20  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -144,7 +144,7 @@ If a new system is introduced, add it here with: purpose, source-of-truth scope,
 
 ## 13. Source of truth and project boundaries
 
-**Linear:** operational governance/execution/portfolio/product-management source of truth.  
+**Linear:** operational governance/execution/portfolio/product-management source of truth. **Every actionable outcome that should be executed, tracked or revisited must exist as a Linear issue; no actionable work may live only in chat, email, notes or only as a checklist inside a broad parent issue.** Use one issue per outcome rather than per mechanical micro-step. In multi-step administrative, provider, migration or launch work, create child issues before or as soon as execution begins whenever outcomes are independently actionable, assignable, blockable or verifiable. Search/update existing issues before creating duplicates, and keep status, priority, blockers and acceptance criteria aligned with reality. ADL-369 Google Workspace decomposition is the reference pattern.  
 **GitHub:** code, repository configuration, technical implementation and version-controlled repository documentation.  
 **This file:** canonical cross-project AI operating rules.
 
@@ -232,6 +232,10 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.20 — 2026-09-20
+- Made Linear capture mandatory for every actionable outcome that should be executed, tracked or revisited; work may not live only in chat/email/notes or only as a broad parent checklist.
+- Required child issues for independently actionable, assignable, blockable or verifiable outcomes in multi-step administrative/provider/migration/launch work, aligned with the Linear Operating Model and ADL-369 reference decomposition.
 
 ### v1.19 — 2026-09-20
 - Established three execution lanes: Grzybołaz, Dymistrz and Adalbird Labs.
