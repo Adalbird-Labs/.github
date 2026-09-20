@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.17  
+**Version:** 1.18  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -168,7 +168,7 @@ Prefer the simplest/cheapest reliable execution mode and respect Work limits.
 
 Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary conversions and copy-paste; automate repetitive safe work; provide exact values/text when manual input is unavoidable; complete all authorized steps before handing work back. Do not delegate to Wojtek merely because describing a task is easier than executing it.
 
-**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. **Before adding `Needs Wojtek` to any issue, estimate Wojtek's active time and show the estimate to Wojtek in the same turn; only then add the issue to the queue.** Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
+**Founder-as-escalation ownership rule:** Wojtek is an escalation point, not the default assignee. AI Autonomous work must not remain assigned to Wojtek unless a concrete founder-only gate is active. AI Assisted work stays AI-owned/unassigned while AI can progress it; when a specific founder-only action is required, create or use the smallest independently verifiable `Needs Wojtek` child/gate rather than assigning the whole parent/workstream to Wojtek. `Human` does not imply Wojtek: first check direct connected capabilities and other authorized execution paths. After Wojtek clears a gate, remove `Needs Wojtek` when no longer applicable and return the parent/workstream to AI ownership. Founder assignment is reserved for concrete decisions, spend authorization, legal/security/privacy approval, MFA/identity/provider actions that cannot be delegated, or physical actions that automation cannot safely perform. Management reporting should track Human Dependency Ratio = active `Needs Wojtek` / all active issues, separately from raw assignee counts.\n\n**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. **Before adding `Needs Wojtek` to any issue, estimate Wojtek's active time and show the estimate to Wojtek in the same turn; only then add the issue to the queue.** Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
 
 ## 16. Escalation quality
 
@@ -232,6 +232,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.18 — 2026-09-20
+- Made Wojtek an escalation point rather than the default issue assignee.
+- Required AI Autonomous/AI Assisted work to remain AI-owned or unassigned until a concrete founder-only gate exists; use the smallest `Needs Wojtek` child/gate instead of assigning whole workstreams.
+- Added automatic ownership return after founder gates clear and Human Dependency Ratio as the management metric for founder dependency.
 
 ### v1.17 — 2026-09-20
 - Added a privacy-safe Physical Device Lab completion callback as the standard Direct Chat observability path: PASS/FAIL, allowlisted action, device alias, GitHub run ID and commit SHA only.
