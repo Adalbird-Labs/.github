@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.13  
+**Version:** 1.14  
 **Last updated:** 2026-09-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -168,6 +168,8 @@ Prefer the simplest/cheapest reliable execution mode and respect Work limits.
 
 Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary conversions and copy-paste; automate repetitive safe work; provide exact values/text when manual input is unavoidable; complete all authorized steps before handing work back. Do not delegate to Wojtek merely because describing a task is easier than executing it.
 
+**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
+
 ## 16. Escalation quality
 
 Prefer **Problem → Evidence → Options → Recommendation → Required decision**. Do not manufacture a decision request when existing authority already permits action.
@@ -220,6 +222,10 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.14 — 2026-09-20
+- Standardized `Needs Wojtek` founder-time estimation on Linear's extended T-shirt scale (XS–XXXL).
+- Defined Estimate on `Needs Wojtek` issues as Wojtek's active hands-on time and kept other issues unestimated unless another explicit convention is adopted.
 
 ### v1.13 — 2026-09-20
 - Made screenshot-first diagnosis the default for failed allowlisted physical-device UI flows before repeated hypothesis loops or founder visual escalation.
