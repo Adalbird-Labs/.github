@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.24  
+**Version:** 1.25  
 **Last updated:** 2026-09-21  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -146,7 +146,9 @@ If a new system is introduced, add it here with: purpose, source-of-truth scope,
 
 ## 13. Source of truth and project boundaries
 
-**Linear:** operational governance/execution/portfolio/product-management source of truth. **Every actionable outcome that should be executed, tracked or revisited must exist as a Linear issue; no actionable work may live only in chat, email, notes or only as a checklist inside a broad parent issue.** Use one issue per outcome rather than per mechanical micro-step. In multi-step administrative, provider, migration or launch work, create child issues before or as soon as execution begins whenever outcomes are independently actionable, assignable, blockable or verifiable. Search/update existing issues before creating duplicates, and keep status, priority, blockers and acceptance criteria aligned with reality. ADL-369 Google Workspace decomposition is the reference pattern.  
+**Linear:** operational governance/execution/portfolio/product-management source of truth. **Every actionable outcome that should be executed, tracked or revisited must exist as a Linear issue; no actionable work may live only in chat, email, notes or only as a checklist inside a broad parent issue.** Use one issue per outcome rather than per mechanical micro-step. In multi-step administrative, provider, migration or launch work, create child issues before or as soon as execution begins whenever outcomes are independently actionable, assignable, blockable or verifiable. Search/update existing issues before creating duplicates, and keep status, priority, blockers and acceptance criteria aligned with reality. ADL-369 Google Workspace decomposition is the reference pattern.
+
+**Not-Before / Start eligibility:** when an issue is intentionally premature until a known calendar date, record a machine-readable `Not Before: YYYY-MM-DD` line in the issue description (until Linear exposes a supported issue-level Start Date through the connected API). Before that date, the issue remains visible for planning but is **ineligible for execution, runner selection, AI backlog prioritization, WIP pull, or `dalej` batching**. `Due Date` remains the completion deadline and must not be used as a substitute for start eligibility. Use Not Before only for genuine calendar gates (renewal windows, delayed reviews, evidence-maturation windows, scheduled maintenance); dependency/event gates should remain dependencies/blockers rather than invented dates. On/after the date, normal priority/WIP rules apply. When direct issue-level Start Date becomes available, migrate this metadata to the native field while preserving semantics.  
 **GitHub:** code, repository configuration, technical implementation and version-controlled repository documentation.  
 **This file:** canonical cross-project AI operating rules.
 
@@ -234,6 +236,13 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.25 — 2026-09-21
+- Added the cross-project `Not Before` / start-eligibility rule for intentionally future-dated Linear work.
+- Made future-gated issues ineligible for AI/Runner execution and backlog pull before their eligibility date, while keeping Due Date as the separate completion deadline.
+- Standardized `Not Before: YYYY-MM-DD` in issue descriptions as the temporary machine-readable representation until the connected Linear API exposes issue-level Start Date.
+- Required calendar gates to use Not Before and dependency/event gates to remain explicit blockers rather than invented dates.
+
 
 ### v1.24 — 2026-09-21
 - Recorded ADL-392 hardened central S10 diagnostic PASS and ADL-464 least-privilege GitHub App metadata-only provenance PASS.
