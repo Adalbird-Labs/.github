@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.21  
+**Version:** 1.22  
 **Last updated:** 2026-09-21  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -130,6 +130,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Supabase | Product backend/data/auth/infrastructure | Capability depends on connected tools in current environment | Not inherently | Prefer direct connector/API when available; otherwise use appropriate execution mode. Spending Golden Rule always applies. |
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
+| Chrome Remote Desktop | Emergency/unattended remote administration path for the Adalbird Physical Device Lab laptop | No dedicated direct Chat connector; founder can access from another computer or mobile device after one-time host setup | No for normal use; one-time manual/browser setup on the lab laptop is required | Use only as an emergency/admin path, not as the Physical Device Lab execution mechanism. Keep normal OS/account security and strong PIN/2FA; do not share PINs or credentials in Chat/Linear/GitHub. Do not expose Windows RDP or router port-forwarding for this purpose. Any paid alternative or charge-capable remote-access service requires separate founder approval. |
 | Gmail | Company/provider billing evidence, account notifications and authorized company email actions | **Yes.** As of 2026-09-21 both `contact@adalbirdlabs.com` (company) and `wmisiarz@gmail.com` (personal) are connected as separate Gmail identities | No for supported search/read/send/draft/label actions | **Always validate/select the intended linked Gmail identity before reading or writing.** Company actions default to `contact@adalbirdlabs.com`; personal Gmail must not be used as the company sender merely for convenience. Use Gmail as communication/evidence, not as a substitute for provider-panel truth. Never expose secrets from account emails. External sends still require the appropriate company/external-action authority. |
 | Google Workspace Admin | Company identity, Gmail/domain administration, Groups, mail routing/authentication and Workspace billing/admin settings | No dedicated Admin connector in normal Chat as of 2026-09-21; Gmail itself is directly connected separately | Browser/manual interaction when Admin-console changes are required; Work is optional, not mandatory, if Wojtek can perform the provider-UI steps in Chat | Provider/Admin console is authoritative for Workspace configuration. Chat may guide and verify via DNS/Gmail evidence. Any paid plan, added license, upgrade or charge-capable feature requires Wojtek approval under the Spend Golden Rule. Preserve rollback during mail migrations until end-to-end validation passes. |
 | OVHcloud | Company domains, DNS/email hosting and company website hosting | Account panel: no dedicated direct Chat connector; website deployment is automated via GitHub Actions | Only when browser/panel interaction is materially required; otherwise use GitHub/Gmail/direct evidence | Provider panel is authoritative for domain/email/account settings. Never purchase, renew, upgrade or accept chargeable changes without Wojtek approval. Preserve independent recovery from the company domain. |
@@ -233,6 +234,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.22 — 2026-09-21
+- Added Chrome Remote Desktop to the Systems & Direct-Access Registry as the approved emergency/unattended administration path for the Physical Device Lab laptop.
+- Recorded that Chrome Remote Desktop is not a Device Lab execution mechanism, has no dedicated direct Chat connector, and requires a one-time founder setup on the lab laptop.
+- Prohibited credential/PIN sharing and direct public RDP/router-port exposure for this use case; any paid remote-access alternative remains founder-only spend.
 
 ### v1.21 — 2026-09-21
 - Added Google Workspace Admin to the Systems & Direct-Access Registry after Adalbird Labs migrated company mail to Google Workspace.
