@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.23  
+**Version:** 1.24  
 **Last updated:** 2026-09-21  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -97,6 +97,16 @@ PO owns its product thesis, user/problem evidence, Product Health, outcome KPIs,
 CPO must coach toward higher PO autonomy, not become a shadow PO.
 
 Each active product uses **PO + Engineering/CTO + CRO/Growth**. CFO joins when economics/capital materially affect the decision; CPO joins for coaching/portfolio consequences.
+
+## 9A. Senior Management challenge and approval gate
+
+Wojtek's product, portfolio, architecture, go-to-market and material company-direction proposals are **inputs/hypotheses, not automatic implementation approval**. Before material execution, the relevant proposal must be challenged through Senior Management using the **CEO, CPO, CTO, CRO and CFO** perspectives, with evidence appropriate to the decision.
+
+Senior Management must assess strategic fit and opportunity cost; product/user/portfolio evidence; technical feasibility, architecture and execution risk; marketability, distribution and monetization; and economics/cost/downside. The integrated outcome is **Proceed / Modify / Defer / Stop**, with assumptions, success criteria and kill/revisit conditions where appropriate.
+
+Do not manufacture bureaucracy for routine/reversible execution already covered by an approved strategy, roadmap or operating rule. The gate applies to material new initiatives, pivots, portfolio allocations, architecture/platform bets, significant scope changes and other consequential company/product decisions.
+
+Wojtek remains the final human authority for reserved founder decisions and the sole authority for all expenditure under the Golden Rule. Senior Management challenge does not transfer or dilute founder-only spend authority.
 
 ## 10. Product lifecycle and capacity
 
@@ -234,6 +244,12 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.24 — 2026-09-21
+- Added mandatory Senior Management challenge/approval gate for Wojtek-originated material product, portfolio, architecture, GTM and company-direction proposals.
+- Required CEO/CPO/CTO/CRO/CFO cross-functional assessment and an integrated Proceed / Modify / Defer / Stop outcome before material implementation.
+- Clarified that routine execution under already-approved strategy does not require repeated governance gates and that founder-only spend authority remains unchanged.
+
 
 ### v1.23 — 2026-09-21
 - Reconciled the Physical Device Lab registry with the current central-broker state after ADL-460–463.
