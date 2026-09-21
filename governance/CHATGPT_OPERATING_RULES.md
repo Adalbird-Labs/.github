@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.25  
+**Version:** 1.26  
 **Last updated:** 2026-09-21  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -148,7 +148,17 @@ If a new system is introduced, add it here with: purpose, source-of-truth scope,
 
 **Linear:** operational governance/execution/portfolio/product-management source of truth. **Every actionable outcome that should be executed, tracked or revisited must exist as a Linear issue; no actionable work may live only in chat, email, notes or only as a checklist inside a broad parent issue.** Use one issue per outcome rather than per mechanical micro-step. In multi-step administrative, provider, migration or launch work, create child issues before or as soon as execution begins whenever outcomes are independently actionable, assignable, blockable or verifiable. Search/update existing issues before creating duplicates, and keep status, priority, blockers and acceptance criteria aligned with reality. ADL-369 Google Workspace decomposition is the reference pattern.
 
-**Not-Before / Start eligibility:** when an issue is intentionally premature until a known calendar date, record a machine-readable `Not Before: YYYY-MM-DD` line in the issue description (until Linear exposes a supported issue-level Start Date through the connected API). Before that date, the issue remains visible for planning but is **ineligible for execution, runner selection, AI backlog prioritization, WIP pull, or `dalej` batching**. `Due Date` remains the completion deadline and must not be used as a substitute for start eligibility. Use Not Before only for genuine calendar gates (renewal windows, delayed reviews, evidence-maturation windows, scheduled maintenance); dependency/event gates should remain dependencies/blockers rather than invented dates. On/after the date, normal priority/WIP rules apply. When direct issue-level Start Date becomes available, migrate this metadata to the native field while preserving semantics.  
+**Not-Before / Start eligibility:** when an issue is intentionally premature until a known calendar date, record a machine-readable `Not Before: YYYY-MM-DD` line in the issue description (until Linear exposes a supported issue-level Start Date through the connected API). Before that date, the issue remains visible for planning but is **ineligible for execution, runner selection, AI backlog prioritization, WIP pull, or `dalej` batching**. `Due Date` remains the completion deadline and must not be used as a substitute for start eligibility. Use Not Before only for genuine calendar gates (renewal windows, delayed reviews, evidence-maturation windows, scheduled maintenance); dependency/event gates should remain dependencies/blockers rather than invented dates. On/after the date, normal priority/WIP rules apply. When direct issue-level Start Date becomes available, migrate this metadata to the native field while preserving semantics.
+
+**Execution Horizon:** every open actionable Linear issue must carry exactly one label from the workspace label group `Execution Horizon`: `NOW`, `NEXT`, `LATER`, or `PARKED`.
+- **NOW** — current execution horizon. Only NOW issues are eligible for normal AI/Runner/PO backlog pull, and they remain subject to Not Before, blockers/dependencies, WIP/capacity, execution mode, authority and safety gates.
+- **NEXT** — intentionally next after the current safe execution horizon. Important/urgent priority may be preserved, but the issue is not executable until promoted to NOW.
+- **LATER** — planned future work outside the next horizon; not executable.
+- **PARKED** — retained work/idea with no current execution commitment; not executable until explicitly reconsidered.
+
+**Selection order:** Execution Horizon → Not Before → blockers/dependencies → WIP/capacity/authority → scope rules → Priority → execution. Priority expresses importance inside an eligible horizon; it must not pull NEXT/LATER/PARKED work into execution.
+
+**Horizon rebalance:** Senior Management performs a controlled horizon rebalance during the daily morning management review, using changed evidence, completed/blocked NOW work, release/incident pressure, capacity and portfolio priorities. Keep NOW deliberately small. Ordinary Runner/PO execution may not self-promote NEXT/LATER/PARKED into NOW merely to find work. Emergency promotion outside the morning review requires an explicit current Wojtek instruction or a documented critical incident/security/release condition where delay would materially increase harm; record the reason in Linear.  
 **GitHub:** code, repository configuration, technical implementation and version-controlled repository documentation.  
 **This file:** canonical cross-project AI operating rules.
 
@@ -236,6 +246,13 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.26 — 2026-09-21
+- Added the four-state Linear Execution Horizon model: NOW / NEXT / LATER / PARKED.
+- Made Execution Horizon the first normal backlog eligibility gate; only NOW is executable during ordinary AI/Runner/PO pull.
+- Separated importance (Priority) from execution timing (Execution Horizon) and defined the canonical selection order.
+- Added controlled daily Senior Management horizon rebalance and prohibited ordinary self-promotion into NOW.
+
 
 ### v1.25 — 2026-09-21
 - Added the cross-project `Not Before` / start-eligibility rule for intentionally future-dated Linear work.
