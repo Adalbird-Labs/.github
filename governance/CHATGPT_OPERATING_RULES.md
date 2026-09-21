@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.20  
-**Last updated:** 2026-09-20  
+**Version:** 1.21  
+**Last updated:** 2026-09-21  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -130,7 +130,8 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Supabase | Product backend/data/auth/infrastructure | Capability depends on connected tools in current environment | Not inherently | Prefer direct connector/API when available; otherwise use appropriate execution mode. Spending Golden Rule always applies. |
 | Render | Production hosting/deployments/logs/metrics/environment configuration | Yes, when connected | No for supported API actions | Prefer direct Render tools for reads and authorized reversible configuration. Creating/upgrading paid resources, billable plan changes or any action that may create a charge requires Wojtek’s explicit approval under the Spend Golden Rule. |
 | Google Drive | Shared files/artifacts where used | Capability depends on connected connector | Not inherently | Prefer direct connector for supported operations; do not duplicate canonical governance unnecessarily. |
-| Gmail | Company/provider billing evidence, account notifications and authorized company email actions | Yes, when connected | No for supported search/read/send/draft/label actions | Use Gmail as communication/evidence, not as a substitute for provider-panel truth. Never expose secrets from account emails. External sends still require the appropriate company/external-action authority. |
+| Gmail | Company/provider billing evidence, account notifications and authorized company email actions | **Yes.** As of 2026-09-21 both `contact@adalbirdlabs.com` (company) and `wmisiarz@gmail.com` (personal) are connected as separate Gmail identities | No for supported search/read/send/draft/label actions | **Always validate/select the intended linked Gmail identity before reading or writing.** Company actions default to `contact@adalbirdlabs.com`; personal Gmail must not be used as the company sender merely for convenience. Use Gmail as communication/evidence, not as a substitute for provider-panel truth. Never expose secrets from account emails. External sends still require the appropriate company/external-action authority. |
+| Google Workspace Admin | Company identity, Gmail/domain administration, Groups, mail routing/authentication and Workspace billing/admin settings | No dedicated Admin connector in normal Chat as of 2026-09-21; Gmail itself is directly connected separately | Browser/manual interaction when Admin-console changes are required; Work is optional, not mandatory, if Wojtek can perform the provider-UI steps in Chat | Provider/Admin console is authoritative for Workspace configuration. Chat may guide and verify via DNS/Gmail evidence. Any paid plan, added license, upgrade or charge-capable feature requires Wojtek approval under the Spend Golden Rule. Preserve rollback during mail migrations until end-to-end validation passes. |
 | OVHcloud | Company domains, DNS/email hosting and company website hosting | Account panel: no dedicated direct Chat connector; website deployment is automated via GitHub Actions | Only when browser/panel interaction is materially required; otherwise use GitHub/Gmail/direct evidence | Provider panel is authoritative for domain/email/account settings. Never purchase, renew, upgrade or accept chargeable changes without Wojtek approval. Preserve independent recovery from the company domain. |
 | Apple App Store Connect / Developer | Shared iOS distribution, developer/trader metadata and annual membership | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Membership/payment changes require Wojtek approval; legal seller identity must remain accurate. |
 | Google Play Console | Shared Android distribution, developer identity and store metadata | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Purchases/paid services require Wojtek approval; identity/support data must remain accurate. |
@@ -232,6 +233,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.21 — 2026-09-21
+- Added Google Workspace Admin to the Systems & Direct-Access Registry after Adalbird Labs migrated company mail to Google Workspace.
+- Recorded that both company `contact@adalbirdlabs.com` and personal `wmisiarz@gmail.com` Gmail identities are connected separately in Chat and must be explicitly disambiguated before reads/writes.
+- Clarified that Workspace Admin has no dedicated direct Chat connector in the current environment; provider-console changes remain guided browser/manual work, while Gmail operational actions are direct.
 
 ### v1.20 — 2026-09-20
 - Made Linear capture mandatory for every actionable outcome that should be executed, tracked or revisited; work may not live only in chat/email/notes or only as a broad parent checklist.
