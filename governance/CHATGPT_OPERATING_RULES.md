@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.28  
-**Last updated:** 2026-09-21  
+**Version:** 1.29  
+**Last updated:** 2026-09-22  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -184,6 +184,10 @@ Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary
 
 **Three-lane execution and shared-resource arbitration:** all actionable work is executed through exactly three operational lanes: (1) **Grzybołaz** for product-local Grzybołaz work, (2) **Dymistrz** for product-local Dymistrz work, and (3) **Adalbird Labs** for Company, Adalbird Platform, Product Incubator and any cross-product/shared-resource work. Product chats must not directly compete for shared execution resources. Any work that can collide across products — including Physical Device Lab/S10 or other shared devices, device-test scheduling, shared CI/GitHub Actions capacity or budget, shared platform primitives, company/provider accounts, domains, security/governance, billing/spend, or other globally serialized resources — belongs to or is arbitrated by the Adalbird Labs lane. A product lane may request such a gate/job and continue with other safe work; Adalbird Labs serializes the shared resource and returns evidence/result to the originating product. S25 is opportunistic capacity, not a guaranteed standing worker. Within each lane, use batch execution per iteration: refresh Linear, take the highest-priority safe task, execute and verify it, then continue to the next safe task without asking Wojtek what to do next. Stop only for a real human/founder gate, unsafe ambiguity, exhausted safe work, or a dependency that cannot be progressed independently. Linear remains the source of truth; lane assignment is an execution-routing rule and does not require moving a product issue out of its product project when a small shared-resource gate can be represented separately.\n\n**Founder-as-escalation ownership rule:** Wojtek is an escalation point, not the default assignee. AI Autonomous work must not remain assigned to Wojtek unless a concrete founder-only gate is active. AI Assisted work stays AI-owned/unassigned while AI can progress it; when a specific founder-only action is required, create or use the smallest independently verifiable `Needs Wojtek` child/gate rather than assigning the whole parent/workstream to Wojtek. `Human` does not imply Wojtek: first check direct connected capabilities and other authorized execution paths. After Wojtek clears a gate, remove `Needs Wojtek` when no longer applicable and return the parent/workstream to AI ownership. Founder assignment is reserved for concrete decisions, spend authorization, legal/security/privacy approval, MFA/identity/provider actions that cannot be delegated, or physical actions that automation cannot safely perform. Management reporting should track Human Dependency Ratio = active `Needs Wojtek` / all active issues, separately from raw assignee counts.\n\n**Needs Wojtek effort convention:** for issues carrying the `Needs Wojtek` label, Linear `Estimate` represents Wojtek's expected active hands-on time, not the total implementation effort. Use the extended T-shirt scale: `XS` ≤5 min, `S` 5–15 min, `M` 15–30 min, `L` 30–60 min, `XL` 1–2 h, `XXL` 2–4 h, `XXXL` >4 h. **Before adding `Needs Wojtek` to any issue, estimate Wojtek's active time and show the estimate to Wojtek in the same turn; only then add the issue to the queue.** Keep non-`Needs Wojtek` issues unestimated unless a separate explicit convention is adopted, so the field remains unambiguous. The `Needs Wojtek` view should display the Estimate column whenever Linear view configuration allows it.
 
+## 15A. Human-readable ticket references
+
+Whenever communicating with Wojtek about a Linear ticket, always pair the ticket identifier with a concise Polish translation of its title on first meaningful reference in the message, using the format **ADL-123 — Polska nazwa zadania**. Apply this across Adalbird Labs, Grzybołaz, Dymistrz and future projects, including status reports, dependency explanations, blockers, recommendations and Needs Wojtek requests. When several tickets are mentioned, label each one this way so Wojtek can understand the relationship without memorizing identifiers. The Polish wording should preserve the operational meaning of the canonical Linear title; Linear itself remains the source of truth and its stored title does not need to be translated or renamed.
+
 ## 16. Escalation quality
 
 Prefer **Problem → Evidence → Options → Recommendation → Required decision**. Do not manufacture a decision request when existing authority already permits action.
@@ -246,6 +250,10 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.29 — 2026-09-22
+- Added the cross-project human-readable ticket-reference rule: every meaningful ticket reference to Wojtek must pair the ADL identifier with a concise Polish translation of the ticket title.
+- Applied the convention to status reports, dependencies, blockers, recommendations and Needs Wojtek communication without changing canonical Linear titles.
 
 ### v1.28 — 2026-09-21
 - Recorded separate Google Drive identities for `contact@adalbirdlabs.com` and `wmisiarz@gmail.com` and required explicit account selection before Drive reads/writes.
