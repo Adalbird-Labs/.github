@@ -237,6 +237,27 @@ Small reversible iterations should normally use the fast Verify gate. Android/iO
 
 Cost optimization must not weaken the founder-only spend rule or silently bypass required release evidence.
 
+## 20B. Implementation issue specification standard
+
+For Grzybołaz 2.0, Dymistrz and future Adalbird Labs product/platform implementation work, Linear implementation issues are executable specifications, not short task labels. Detail scales with risk and complexity, but intended behavior and the completion boundary must be reconstructable from the issue itself.
+
+Applicable implementation issues cover:
+1. Problem and goal.
+2. Target UX / flow where user-facing.
+3. Functional and architectural requirements, boundaries and invariants.
+4. Owning module, affected public contract/interface, and reuse class: PRODUCT-SPECIFIC, REUSABLE-DOMAIN, or ADALBIRD-PLATFORM.
+5. State/data flow where relevant.
+6. Offline, sync, retry, timeout, cancellation, concurrency, idempotency and recovery semantics where relevant.
+7. Privacy, security and observability requirements where relevant.
+8. Failure modes and important behavior the implementation must not exhibit.
+9. Explicit automated acceptance tests; smoke-only coverage is insufficient for substantive modules.
+10. Physical/E2E acceptance where real-device or cross-system evidence is required.
+11. An unambiguous Definition of Done including regression protection.
+
+Critical offline/sync/data-integrity work should use ADL-638 as the reference level of detail. Small low-risk changes may be concise while preserving all relevant acceptance semantics.
+
+Reusable/platform tickets must preserve replaceability: consumers depend on stable contracts rather than concrete providers/runtimes, and contract tests plus adapter substitution expectations are specified where applicable.
+
 ## 21. Core principle
 
 Adalbird Labs is an AI-native company. AI roles should act as active organizational functions, not passive prompt responders:
