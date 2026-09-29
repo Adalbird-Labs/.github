@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.28  
-**Last updated:** 2026-09-21  
+**Version:** 1.29  
+**Last updated:** 2026-09-29  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -32,6 +32,16 @@ No AI role, agent, automation, C-level perspective or Product Owner may purchase
 AI may research, compare, obtain pricing, analyze ROI, negotiate/recommend and prepare a purchase/configuration, but must stop before any action that creates or may create a charge or binding commitment. CFO may recommend expenditure but cannot authorize it.
 
 This overrides every autonomy, proactivity, delegation and Decision Rights rule. Only Wojtek may change it.
+
+### Standing founder authorization — Dymistrz GitHub Actions
+
+Effective 2026-09-29, Wojtek explicitly authorizes AI working on **Dymistrz** to initiate technically justified GitHub Actions/CI runs **within the already approved Actions budget/cap** without requesting per-run approval. This standing authorization is founder authorization under the Golden Rule; it does not delegate authority to increase the budget or create a new paid plan/commitment.
+
+Operating constraints:
+- use paid/charge-capable CI only when technically justified and prefer the cheapest sufficient gate;
+- avoid redundant reruns, duplicate platform builds and speculative paid workflows;
+- diagnose deterministic failures before rerunning where practical;
+- if continuing would require increasing the approved budget/cap, enabling a new paid feature/plan, or otherwise expanding the financial commitment, stop and obtain Wojtek's explicit approval first.
 
 ## 4. Definition of “dalej”
 
@@ -136,7 +146,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | OVHcloud | Company domains, DNS/email hosting and company website hosting | Account panel: no dedicated direct Chat connector; website deployment is automated via GitHub Actions | Only when browser/panel interaction is materially required; otherwise use GitHub/Gmail/direct evidence | Provider panel is authoritative for domain/email/account settings. Never purchase, renew, upgrade or accept chargeable changes without Wojtek approval. Preserve independent recovery from the company domain. |
 | Apple App Store Connect / Developer | Shared iOS distribution, developer/trader metadata and annual membership | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Membership/payment changes require Wojtek approval; legal seller identity must remain accurate. |
 | Google Play Console | Shared Android distribution, developer identity and store metadata | No dedicated direct Chat connector in the current environment | Browser/manual interaction when provider UI or identity verification is required | Product-specific release/store execution stays in the product project. Purchases/paid services require Wojtek approval; identity/support data must remain accurate. |
-| GitHub Actions | CI/CD and workflow evidence | Read/support actions available through GitHub connection where supported | Not inherently | Use direct GitHub capabilities first. |
+| GitHub Actions | CI/CD and workflow evidence | Read/support actions available through GitHub connection where supported | Not inherently | Use direct GitHub capabilities first. For Dymistrz, Wojtek's standing authorization permits technically justified CI/Actions runs within the already approved budget/cap without per-run approval; any budget/cap increase or new paid commitment still requires explicit founder approval. |
 | PostHog | Product analytics/evidence | Plugin is connected, but **not currently authorized for Adalbird Labs use because the active workspace/account identity does not match Adalbird Labs** | No once a valid Adalbird Labs workspace is connected; browser/repo work only where materially needed | Do not read/write PostHog customer/project data until the active organization/project identity is explicitly validated as Adalbird Labs. Current connection must be reconnected/reselected. Free-tier-first; any charge-capable feature or paid usage requires separate founder approval. |
 | Sentry | Production observability | No dedicated ChatGPT plugin found as of 2026-09-19; public docs can be researched from Chat | Not inherently; use direct repository/API capabilities where available, Work only when browser/computer interaction materially helps | Free Developer plan is the default pilot target. No paid plan, PAYG, Seer trial/subscription or other charge-capable feature without explicit Wojtek approval. |
 
