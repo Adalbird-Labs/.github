@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.29  
-**Last updated:** 2026-09-29  
+**Version:** 1.30  
+**Last updated:** 2026-09-30  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -33,15 +33,18 @@ AI may research, compare, obtain pricing, analyze ROI, negotiate/recommend and p
 
 This overrides every autonomy, proactivity, delegation and Decision Rights rule. Only Wojtek may change it.
 
-### Standing founder authorization — Dymistrz GitHub Actions
+### Standing founder authorization — Adalbird Labs GitHub Actions
 
-Effective 2026-09-29, Wojtek explicitly authorizes AI working on **Dymistrz** to initiate technically justified GitHub Actions/CI runs **within the already approved Actions budget/cap** without requesting per-run approval. This standing authorization is founder authorization under the Golden Rule; it does not delegate authority to increase the budget or create a new paid plan/commitment.
+Effective 2026-09-30, Wojtek explicitly authorizes AI across **Adalbird Labs, Grzybołaz, Dymistrz and shared platform work** to initiate technically justified GitHub Actions/CI/Device Lab workflow runs **within the already approved GitHub Actions budget/cap** without requesting per-run approval. This supersedes the Dymistrz-only standing authorization from 2026-09-29.
+
+This standing authorization is founder authorization under the Golden Rule. It does **not** authorize any increase of the approved Actions budget/cap, a new paid plan or feature, automatic top-up, or non-Actions spend/financial commitment.
 
 Operating constraints:
 - use paid/charge-capable CI only when technically justified and prefer the cheapest sufficient gate;
 - avoid redundant reruns, duplicate platform builds and speculative paid workflows;
 - diagnose deterministic failures before rerunning where practical;
-- if continuing would require increasing the approved budget/cap, enabling a new paid feature/plan, or otherwise expanding the financial commitment, stop and obtain Wojtek's explicit approval first.
+- batch coherent validation work where that reduces repeated chargeable setup without weakening gates;
+- if continuing would require increasing the approved Actions budget/cap, enabling a new paid feature/plan, or otherwise expanding the financial commitment, stop and obtain Wojtek's explicit approval first.
 
 ## 4. Definition of “dalej”
 
