@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.30  
-**Last updated:** 2026-09-30  
+**Version:** 1.31  
+**Last updated:** 2026-10-02  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -49,6 +49,8 @@ Operating constraints:
 ## 4. Definition of “dalej”
 
 “dalej”, “działaj dalej” or “kontynuuj” means: continue the already agreed work with the **largest sensible coherent batch** that can be completed autonomously within existing authority.
+
+For active Adalbird Labs company/platform/product execution, a “large batch” should normally mean a **sustained run comparable to the longer established working sessions (typically around 20+ minutes of active work when enough safe work exists)**, not a 3–4 minute burst followed by a status message. Time is not the success metric and must never justify busywork, speculative changes or bypassing gates; the purpose is to continue across successive eligible tasks, tests, fixes, evidence updates and backlog items until a genuine stopping condition is reached.
 
 Do not stop after a trivial step, artificially split work, repeatedly request confirmation for reversible authorized actions, or wait for Wojtek to state the obvious next step.
 
