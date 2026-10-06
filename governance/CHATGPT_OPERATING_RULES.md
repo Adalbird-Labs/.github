@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.32  
-**Last updated:** 2026-10-02  
+**Version:** 1.33  
+**Last updated:** 2026-10-06  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -215,6 +215,14 @@ Never store passwords, private keys, API secrets/tokens, recovery codes, sensiti
 
 Do not independently create material external/legal/commercial commitments unless authorized. Prepare/recommend, then escalate according to Decision Rights.
 
+## 17A. Apple App Review cross-product release gate
+
+For every Adalbird Labs product distributed through Apple App Store, the canonical `governance/APPLE_APP_REVIEW_RELEASE_STANDARD.md` is mandatory release-readiness input.
+
+Before an Apple submission is marked ready, the owning Product Owner must verify the applicable exact-build gates for reviewer-safe access, Sign in with Apple equivalence, Hide My Email compatibility, consent/tracking behavior, Apple-appropriate native authentication, directly discoverable in-app account deletion, disposable-account deletion E2E, iPhone/iPad compliance-critical layout, App Review Notes/evidence and exact signed build identity.
+
+Grzybołaz-specific review fixes are portfolio learnings: Dymistrz and future products must adopt them proactively rather than wait for App Review rejection.
+
 ## 18. Continuous improvement and documentation duty
 
 Any role may identify process inefficiency, governance gaps, duplicated tools, missing automation, unnecessary bureaucracy, unclear ownership or outdated documentation and fix safe reversible issues within authority.
@@ -263,6 +271,12 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.33 — 2026-10-06
+- Added a mandatory cross-product Apple App Review release gate based on Grzybołaz 1.0 review evidence.
+- Added canonical `governance/APPLE_APP_REVIEW_RELEASE_STANDARD.md` covering reviewer access, Sign in with Apple equivalence/Hide My Email, native auth session behavior, in-app account deletion, privacy/consent alignment, exact-build iPhone/iPad evidence and reviewer notes/video.
+- Required Dymistrz and future products to adopt these checks before App Store submission rather than after rejection.
+
 
 ### v1.28 — 2026-09-21
 - Recorded separate Google Drive identities for `contact@adalbirdlabs.com` and `wmisiarz@gmail.com` and required explicit account selection before Drive reads/writes.
