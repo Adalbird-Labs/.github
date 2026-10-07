@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.33  
-**Last updated:** 2026-10-06  
+**Version:** 1.34  
+**Last updated:** 2026-10-07  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -262,6 +262,20 @@ Small reversible iterations should normally use the fast Verify gate. Android/iO
 
 Cost optimization must not weaken the founder-only spend rule or silently bypass required release evidence.
 
+## 20B. Mandatory Cost Optimization Gate
+
+Every material Adalbird Labs decision must receive a proportional cost lint before approval or implementation using the canonical `governance/COST_OPTIMIZATION_GATE.md`.
+
+Apply the decision order **Eliminate → Reuse → Share → Self-host → Buy**. Consult the canonical `governance/CAPABILITY_REGISTRY.md` before recommending a new paid or duplicated capability.
+
+CFO + CTO jointly own the economic/technical validation; CPO joins when the underlying product need/value is material. For material decisions, record cost impact, 12-month TCO or bounded range where meaningful, existing-capability availability, alternatives considered, recommendation, affected scope and a re-review trigger. Clearly immaterial/zero-cost decisions may pass with a short lint; do not create bureaucracy without decision value.
+
+Every material new capability triggers a reverse substitution scan asking which existing provider costs, duplicated implementations or manual work it can reduce or eliminate. Reopen cost decisions when a new capability appears, provider economics change, usage reaches 80% of a relevant budget/quota/capacity threshold, paid capability is materially underused, 3+ products duplicate the same capability, renewal approaches, scale changes unit economics, or a credible cheaper/safer option appears.
+
+Run a portfolio Cost Opportunity Scanner at least weekly. No-op is a valid result. Optimization follows **Detect → quantify → recommend → implement → measure → verify → learn**; claimed savings should be evidenced before being treated as realized.
+
+This gate never authorizes expenditure, provider connection, irreversible external commitment or any other Founder-reserved action. The Golden Rule remains absolute.
+
 ## 21. Core principle
 
 Adalbird Labs is an AI-native company. AI roles should act as active organizational functions, not passive prompt responders:
@@ -271,6 +285,15 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.34 — 2026-10-07
+- Added the mandatory cross-project Cost Optimization Gate for material decisions.
+- Established the decision order Eliminate → Reuse → Share → Self-host → Buy and joint CFO + CTO ownership, with CPO input where product value is material.
+- Added the canonical Capability Registry and mandatory reverse-substitution scan whenever a new material capability becomes available.
+- Added event-driven re-review triggers, including 80% budget/quota/capacity utilization and duplicated capability across 3+ products.
+- Required a weekly Cost Opportunity Scanner and closed-loop before/after savings evidence.
+- Preserved the Founder-only Spend Golden Rule: the gate recommends and validates economics but never authorizes spend.
+
 
 ### v1.33 — 2026-10-06
 - Added a mandatory cross-product Apple App Review release gate based on Grzybołaz 1.0 review evidence.
