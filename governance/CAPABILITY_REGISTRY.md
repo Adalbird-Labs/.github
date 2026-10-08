@@ -19,11 +19,11 @@ This is a decision aid, not an asset inventory. Provider-specific access/authori
 - A new capability triggers a reverse substitution scan against current spend and duplicated work.
 - Never treat an unverified assumption as available capacity.
 
-## Current baseline — 2026-10-07
+## Current baseline — 2026-10-08
 
 | Capability | Current implementation / asset | State | Economic character | Current use / constraint | Re-review trigger |
 |---|---|---|---|---|---|
-| Windows general compute / automation | Existing Windows self-hosted GitHub runner used by Adalbird Physical Device Lab | **Available / expand use** | Existing owned capacity; marginal GitHub runner charge avoided when self-hosted execution is suitable | Proven for broker/device work; broader CI migration must preserve isolation, reliability and required checks | Any new hosted-compute spend, runner saturation, reliability degradation |
+| Windows general compute / automation | Existing owned Windows self-hosted runner used by Adalbird Physical Device Lab | **Partial — Device Lab proven; general CI gated** | Existing owned capacity; suitable self-hosted execution avoids GitHub runner compute charges | Trusted host preflight passed on 2026-10-08; general CI is not activated. Product/PR workloads require actual guest filesystem/network/device/secret/cleanup isolation proof and reliable routing before migration | Isolation PASS, host capacity/access change, new hosted-compute spend or runner saturation |
 | Android physical regression | S10 baseline through Adalbird Physical Device Lab; S25 opportunistic | **Available** | Existing owned devices | Broker-mediated, sequential-first, allowlisted execution | New Android coverage need, capacity bottleneck |
 | iOS/macOS current release compute | Current supported Mac/Xcode host | **Unavailable** | Would require a supported macOS host unless an existing supported asset is found | Legacy MacBook Air can support PoC/admin uses but is not the canonical current-Xcode release host | Supported Mac asset becomes available or Founder authorizes acquisition |
 | iOS physical-device automation | Dedicated supported iPhone + Mac host | **Planned / unavailable** | Hardware acquisition may be required | Manual iPhone testing is possible; autonomous Apple Device Lab not established | New iOS product/release demand or hardware becomes available |
@@ -43,6 +43,12 @@ This is a decision aid, not an asset inventory. Provider-specific access/authori
 **Opportunity:** migrate the subset of Verify/tooling/Android workloads that can run safely and deterministically on owned Windows capacity, preserving GitHub Team as the repository/rules/control plane and GitHub-hosted runners as fallback/specialized capacity.
 
 **Gate:** migration must prove equivalent required-check integrity, isolation, reliability and recovery before broad rollout. No budget increase is authorized by this finding.
+
+## Implementation checkpoint — 2026-10-08
+
+The first cost reduction is implemented in Dymistrz: native packaging reuses successful canonical source validation for the exact SHA and historical internal releases share one web gate before platform builds. Fresh audits, local builds and native/simulator checks remain. [Implementation and hosted Verify evidence](https://github.com/Adalbird-Labs/Dymistrz/pull/390). Billed savings remain unmeasured.
+
+A [trusted read-only Windows preflight](https://github.com/Adalbird-Labs/platform-automation/actions/runs/37810515789) passed and produced privacy-safe host facts. This establishes a working control path, not general CI isolation. [ADL-923](https://linear.app/adalbirdlabs/issue/ADL-923) remains the activation gate; [ADL-921](https://linear.app/adalbirdlabs/issue/ADL-921) remains open for migration and measured savings. No plan or spending increase is implied.
 
 ## Planned evolution
 
