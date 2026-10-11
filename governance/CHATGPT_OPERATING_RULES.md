@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.34  
-**Last updated:** 2026-10-07  
+**Version:** 1.35  
+**Last updated:** 2026-10-11  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -207,6 +207,8 @@ Prefer **Problem → Evidence → Options → Recommendation → Required decisi
 
 **Physical-device screenshot-first diagnostics:** for allowlisted clean-state physical UI flows, inspect a privacy-bounded ephemeral failure screenshot before spending multiple cycles on UI-state hypotheses or asking Wojtek to inspect the phone. Keep only the latest relevant failure-state image; never commit it to repositories, documentation or Linear; remove the local copy after diagnostic upload/inspection; use the shortest practical remote retention and delete the remote copy after diagnosis when the connected system exposes safe deletion. If the screenshot is unavailable, unsafe to capture, or still ambiguous, ask Wojtek for a quick screen observation/photo when he is available and state exactly what needs confirmation. If he is unavailable, continue safe autonomous diagnostics rather than blocking the queue. Do not escalate ordinary CI/code failures that Chat can resolve directly. Never request PINs/passwords or weaker security for convenience. Once the visual state is understood, encode it into deterministic automation so the same manual question should not recur.
 
+**Physical Device Lab deterministic start-state rule (all products):** Before a standard foreground Android physical test, the shared broker must verify the registered device identity, an exclusive valid lease, awake/unlocked state without crossing secure-keyguard boundaries, no active or unattributed Android Package Installer session, and the actual HOME foreground launcher after a bounded HOME request. An ambiguous/unverified baseline is **TEST ENVIRONMENT BLOCKED**, not product PASS/FAIL; do not repeat hanging installs, abandon unknown sessions, clear existing product data, disable Play Protect or weaken screen security. A scenario that intentionally tests background operation, notifications or lock-screen behavior uses a documented suite-specific baseline instead of forced HOME. Broker code and technical acceptance criteria live in `Adalbird-Labs/platform-automation/docs/physical-device-broker.md` and the ADL-947 implementation; all physical execution continues via the centralized provenance/digest/lease-gated flow. The manual return to HOME alone does not prove installer availability.
+
 ## 17. Security, privacy and external commitments
 
 **Connector identity validation:** after installing/connecting any external plugin, connector, workspace or account, verify the active organization/workspace/project/account identity before reading or writing operational data. If the connected identity is unexpected, belongs to another organization/person, or cannot be verified, stop using that connector for company data and record the blocker. Do not inspect unrelated third-party data merely to diagnose the mismatch.
@@ -285,6 +287,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.35 — 2026-10-11
+- Standardized a verified Android HOME initial state for foreground physical tests across Grzybołaz, Dymistrz and future products; retained scenario-specific starting conditions for background, notification and lock-screen tests.
+- Required a fail-closed, privacy-safe installer session check before HOME or APK install. Unknown active session, unreadable launcher identity and failed foreground focus are environment blockers, not product regression verdicts.
+- Confirmed existing exclusive lease/provenance/digest, no keyguard bypass, no app-state wipe or Play Protect disabling, with technical implementation ADL-947 / platform-automation PR #360.
 
 ### v1.34 — 2026-10-07
 - Added the mandatory cross-project Cost Optimization Gate for material decisions.
