@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.36  
-**Last updated:** 2026-10-11  
+**Version:** 1.37  
+**Last updated:** 2026-10-20  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -209,6 +209,12 @@ Prefer **Problem → Evidence → Options → Recommendation → Required decisi
 
 **Physical Device Lab deterministic start-state rule (all products):** Before a standard foreground Android physical test, the shared broker must verify the registered device identity, an exclusive valid lease, awake/unlocked state without crossing secure-keyguard boundaries, no active or unattributed Android Package Installer session, and the actual HOME foreground launcher after a bounded HOME request. An ambiguous/unverified baseline is **TEST ENVIRONMENT BLOCKED**, not product PASS/FAIL; do not repeat hanging installs, abandon unknown sessions, clear existing product data, disable Play Protect or weaken screen security. A scenario that intentionally tests background operation, notifications or lock-screen behavior uses a documented suite-specific baseline instead of forced HOME. Broker code and technical acceptance criteria live in `Adalbird-Labs/platform-automation/docs/physical-device-broker.md` and the ADL-947 implementation; all physical execution continues via the centralized provenance/digest/lease-gated flow. The manual return to HOME alone does not prove installer availability.
 
+### Handoff messages for Claude (Wojtek's relay rule)
+
+Whenever ChatGPT has a material update, decision, request, review note or handoff addressed to Claude, ChatGPT must proactively include one complete, copy-ready message addressed `[ChatGPT → Claude]` **at the very end of its user-facing response**, without waiting for Wojtek to ask. It must contain relevant Linear issue and GitHub PR references, the actual requested action, ownership and remaining gates. No text may follow this message. When there is nothing for Claude, no message is needed.
+
+Linear remains the operational source of truth. Claude does not receive automatic notifications of Linear comments, so writing there does not count as delivery. The final message is explicitly for Wojtek to pass to Claude, and must not falsely claim that Claude has received it.
+
 ## 17. Security, privacy and external commitments
 
 **Connector identity validation:** after installing/connecting any external plugin, connector, workspace or account, verify the active organization/workspace/project/account identity before reading or writing operational data. If the connected identity is unexpected, belongs to another organization/person, or cannot be verified, stop using that connector for company data and record the blocker. Do not inspect unrelated third-party data merely to diagnose the mismatch.
@@ -287,6 +293,9 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.37 — 2026-10-20
+- Added Wojtek's cross-project Claude handoff relay rule: always supply a copy-ready Claude-directed message at the end of the reply whenever one is needed; Linear comments alone do not notify Claude.
 
 ### v1.36 — 2026-10-11
 - Updated Physical Device Lab Direct-Access Registry: normal Chat can initiate a fresh current-main, owner-only, fixed-title read-only S10 diagnostic via trusted GitHub Issue `opened` workflow, proven by run 38163475303.
