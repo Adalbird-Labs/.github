@@ -21,6 +21,14 @@
 6. Prefix messages with `[Claude]`, `[ChatGPT]`, `[Claude → ChatGPT]` or `[ChatGPT → Claude]`. Both connectors can appear in Linear under Wojtek's account; prefixes are coordination hints, not authenticated identities.
 7. Collaboration is asynchronous: an issue comment cannot awaken an inactive Claude session. For a request, comment `[ChatGPT → Claude] ACTION REQUESTED`; Wojtek must then open a Claude session to read it. Acknowledgement is not proof of active execution.
 
+## Operational findings after the 2026-10-25 founder continuation
+
+- The original Claude scope sentence above describes the earlier ADL-958 rollout, not an exhaustive allowlist of future repositories. Subsequent **founder-approved, ticket-scoped** Wedding Event Hub / website work is documented in ADL-986 and ADL-1006; product Incubator access does **not** authorize a general third Build lane.
+- Claude session quota exhaustion is a genuine availability blocker, not an automatic transfer of ownership. A bounded handoff is permissible only on explicit founder instruction, documented in Linear with the exact issue, branch/PR/head SHA, scope, and non-overlap; the returning agent must re-read state and claim before changing files. Example evidence: ADL-986 comments and PR #36 on 2026-10-25.
+- Posting an ACTION REQUESTED Linear comment does not wake Claude while ADL-962 is NEXT. A scheduled ChatGPT task is a separate ChatGPT run, not a magically resumed Claude session; any resume/claim must be backed by a real connector result or ACK.
+- Founder-only actions must be split into small **Needs Wojtek** issues with an active-time estimate and exact link/instructions. Approved morning review automation can present this existing queue, but does not expand decision or spend rights. Example: ADL-1025 for a GitHub Actions secret.
+- These observations are **proposals for the canonical update**, not a new operating authority. Existing `CHATGPT_OPERATING_RULES.md` v1.36 and founder spending/security controls continue to govern.
+
 ## Canonical propagation plan
 
 1. Increment `governance/CHATGPT_OPERATING_RULES.md` from v1.36 to v1.37 and add this multi-agent rule in the organizational model.
