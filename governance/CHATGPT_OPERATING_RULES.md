@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.36  
-**Last updated:** 2026-10-11  
+**Version:** 1.37  
+**Last updated:** 2026-11-05  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -137,6 +137,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 |---|---|---:|---:|---|
 | Linear | Projects, issues, execution status, governance, strategy, Product Health, decisions | Yes, when connected | No for supported API actions | Prefer direct Linear tools. Keep company/product boundaries. |
 | GitHub | Code, repository config, version-controlled docs, canonical AI rules | Yes, when connected | **No for supported repository/API actions** | Chat may read/create/update repository files directly. Use Work only when substantial local repo/computer execution materially helps. |
+| Adalbird AI Bridge (`Adalbird-Labs/ai-bridge`) | Private ACK-only event transport and Claude Code Routine integration staged under Linear ADL-962; GitHub Issue #1 is an inert wake endpoint, **not** a task backlog; Linear remains authoritative | Yes, for supported GitHub and Linear connector reads/writes | No for code/docs work; Founder UI required for environment credential and account billing controls | **DRAFT / NOT ACTIVE.** No automatic Routine fires, PR merge, extra paid credits, release, webhook activation or spend ≥ PLN 0.01 without Founder authorization and explicit cost/security/E2E gates. Shared Founder GitHub/Linear identity is not authenticated agent provenance. Source migration from `platform-automation` PR #390; new repo isolates credentials and permissions but does not by itself establish independent review. |
 | ChatGPT Projects | Conversation/project context and project instructions | Yes | No | Project instructions bootstrap this canonical file + local overlay. |
 | ChatGPT Work | Browser/computer/repository/file-heavy execution | Separate execution mode | N/A | Use only when it materially improves execution; do not use merely because available. |
 | ChatGPT Automations | Scheduled/recurring/condition-watch AI execution and reminders | Yes, when the automation capability is available and authorized | No | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
