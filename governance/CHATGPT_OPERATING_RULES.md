@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.37  
-**Last updated:** 2026-11-05  
+**Version:** 1.38  
+**Last updated:** 2026-11-06  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -91,6 +91,14 @@ Do not create issues merely to demonstrate activity.
 **Signal → Evidence → Hypothesis → Experiment / Decision → Justified Implementation**
 
 Before implementation ask: what outcome changes, what evidence supports it, why now, what happens if we do nothing, is there a cheaper/faster experiment, is there already an issue, and should something else stop instead?
+
+### Senior Management outcome-first reporting (Founder decision 2026-11-06)
+
+Every recurring or ad-hoc **Senior Management report** must lead with **measurable business/product outcomes and decision-grade evidence**, not activity volume. CEO integrates CPO, CTO, CRO and CFO perspectives; each relevant outcome must include the measurement period, dated source, baseline and comparable change, accountable owner, confidence/evidence class (**verified**, **self-reported**, **estimated**, or **unknown**), risks/blockers, recommendation and the precise decision needed, if any.
+
+Use stage-appropriate evidence: acquisition/activation/retention and actual tester release results, confirmed revenue and conversion rather than commercial hypotheses, cost/run-rate and **verified vs projected savings**, security/release gate results, portfolio WIP and Founder dependency. Ticket/PR/CI counts are secondary execution diagnostics, never proof of customer value, revenue, readiness or cost savings. When a credible current source is absent, report **UNKNOWN** explicitly; do not substitute historical zero, presumed PASS, a product assumption or a Founder declaration for verified evidence.
+
+Keep detailed KPI evidence in existing product PO/Product Health sources and company CRO/CFO/Portfolio Scorecard documents in Linear; do not create competing dashboards or tracking systems. Measurement does not authorize new surveillance, paid providers, outreach, real-user data access, publication, or any spend. The Founder-only Spend Golden Rule and all product/security/privacy/release/Portfolio Gates remain unchanged.
 
 ## 8. Organizational model
 
@@ -288,6 +296,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.38 — 2026-11-06
+- Made measurable, source-dated, confidence-labelled business outcomes mandatory in CEO/CPO/CTO/CRO/CFO Senior Management reports under Founder decision SM-2026-11.
+- Clarified that missing evidence is UNKNOWN, task/PR/CI volume is secondary, and hypothetical revenue or unverified savings are not realized outcomes.
+- Kept reporting in existing Linear sources of truth and all spending, security/privacy, research, product Build and publication gates unchanged.
 
 ### v1.36 — 2026-10-11
 - Updated Physical Device Lab Direct-Access Registry: normal Chat can initiate a fresh current-main, owner-only, fixed-title read-only S10 diagnostic via trusted GitHub Issue `opened` workflow, proven by run 38163475303.
