@@ -2,8 +2,8 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.38  
-**Last updated:** 2026-11-06  
+**Version:** 1.39  
+**Last updated:** 2026-11-07  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
 ## 1. Purpose and propagation
@@ -148,7 +148,7 @@ This registry is mandatory. Update it whenever a new system becomes part of the 
 | Adalbird AI Bridge (`Adalbird-Labs/ai-bridge`) | Private ACK-only event transport and Claude Code Routine integration staged under Linear ADL-962; GitHub Issue #1 is an inert wake endpoint, **not** a task backlog; Linear remains authoritative | Yes, for supported GitHub and Linear connector reads/writes | No for code/docs work; Founder UI required for environment credential and account billing controls | **DRAFT / NOT ACTIVE.** No automatic Routine fires, PR merge, extra paid credits, release, webhook activation or spend ≥ PLN 0.01 without Founder authorization and explicit cost/security/E2E gates. Shared Founder GitHub/Linear identity is not authenticated agent provenance. Source migration from `platform-automation` PR #390; new repo isolates credentials and permissions but does not by itself establish independent review. |
 | ChatGPT Projects | Conversation/project context and project instructions | Yes | No | Project instructions bootstrap this canonical file + local overlay. |
 | ChatGPT Work | Browser/computer/repository/file-heavy execution | Separate execution mode | N/A | Use only when it materially improves execution; do not use merely because available. |
-| ChatGPT Automations | Scheduled/recurring/condition-watch AI execution and reminders | Yes, when the automation capability is available and authorized | No | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
+| ChatGPT Automations | Scheduled/recurring/condition-watch AI execution, native supported app-event triggers and reminders | Yes, when the relevant automation capability is exposed and authorized in the current session | No for supported native APIs; provider UI only where required | Use only for genuine future/recurring behavior, not as a substitute for immediate execution. Verify the current native webhook schema instead of treating a historical endpoint failure as a permanent limitation; event subscriptions require structured trigger configuration, not a prompt-only change. Bridge activation remains separately gated. Respect schedule/frequency limits, connector authorization and the Spend Golden Rule. Keep company automations auditable through Linear where they affect the operating model. |
 | Adalbird Autonomous Organization Runtime | Company State, organizational heartbeat, anti-starvation portfolio orchestration, persistent CPO/CRO/Platform discovery loops, shadow evidence, bounded-autonomy gates and Founder Absence evidence. Code/evidence contracts live in `Adalbird-Labs/platform-automation`; Linear remains source of truth for work/state/decisions and ChatGPT Automations provides scheduled loop invocation where configured. | Yes for supported direct Chat access to Linear, GitHub and Automations | No for normal control-plane/loop operations; Work only if a substantial local/computer task materially helps | Runtime is fail-closed. Shadow/read-only evidence does not grant live authority. Product execution remains subject to product gates. Any spend from PLN 0.01, provider connection, reserved legal/security/privacy action or irreversible external commitment remains Founder-only. Bounded live execution may activate only after the committed observe/live-safety gates PASS. |
 | Adalbird Organizational Runtime | Cross-project Company State, heartbeat/starvation detection, Portfolio Orchestrator, founder-independent CPO/CRO/Platform loops, decision/evidence control plane and bounded-autonomy gates; code/evidence in `platform-automation`, operational backlog/status in Linear | Yes, via existing Linear/GitHub/ChatGPT Automations direct capabilities | No for supported operations | Scheduler loops are operational and must remain auditable through Linear evidence. Shadow/read-only and zero-spend discovery may run autonomously. Live task execution remains gated by ADL-557 → ADL-836 → ADL-846; max-one bounded claim/cycle, no product-specific execution without explicit exception, no spend >= PLN 0.01, provider connection, reserved legal/security/privacy authority or irreversible external action. |
 | ChatGPT Plugins / Plugin Management | Discover/connect packaged external-system capabilities | Plugin discovery/status is directly usable; installation/connection always requires Wojtek’s explicit action | No for plugin discovery/connected tool use; browser only if a provider flow itself requires it | Validate the active tenant identity after connection and before operational use. A plugin connection is not permission to spend, create paid accounts or inspect unrelated data. |
@@ -296,6 +296,10 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.39 — 2026-11-07
+- Corrected Systems & Direct-Access Registry capability evidence under ADL-1083: this Work session successfully discovers native GitHub PR webhook schemas and exposes structured triggers in create/update. Historical normal-Chat 404 evidence is not a permanent account/product capability verdict.
+- Native create has no draft/disabled-create input in this session; preparation stops before activation. No bridge permissions, subscriptions, Routine resume, live testing or spending authority were granted by this documentation update.
 
 ### v1.38 — 2026-11-06
 - Made measurable, source-dated, confidence-labelled business outcomes mandatory in CEO/CPO/CTO/CRO/CFO Senior Management reports under Founder decision SM-2026-11.
