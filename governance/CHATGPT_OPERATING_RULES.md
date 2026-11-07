@@ -2,7 +2,7 @@
 
 **Status:** Canonical / Mandatory  
 **Owner:** Wojtek  
-**Version:** 1.39  
+**Version:** 1.40  
 **Last updated:** 2026-11-07  
 **Applies to:** Adalbird Labs, Grzybołaz, Dymistrz and future Adalbird Labs projects
 
@@ -212,6 +212,27 @@ Prepare final filenames/upload-ready artifacts/target formats; avoid unnecessary
 
 ## 16. Escalation quality
 
+### Explicit requests for Wojtek's action — Founder decision 2026-11-07
+
+When progress requires Wojtek's action, decision, login, access, approval or essential information, **ask him explicitly in that same reply**. A blocker description, a `Needs Wojtek` label, a tool form or an uncompleted authentication request is not a sufficient user-facing request. Never expect Wojtek to infer that he must act or keep sending `dalej` to discover the dependency.
+
+Use a clearly separated, visually prominent callout. Use a colored box when the response surface supports it; otherwise use a Markdown blockquote with a red marker and a bold Polish title: **🟥 POTRZEBUJĘ TWOJEGO DZIAŁANIA** or **🟥 POTRZEBUJĘ TWOJEJ DECYZJI**. The wording and emphasis must remain understandable without color.
+
+Every request must state:
+- the issue number and its Polish title;
+- the **exact next action or decision**, where to perform it and any necessary link/control;
+- why Wojtek is needed and why existing authorization or an available safe route is insufficient;
+- his estimated active time (and the established T-shirt estimate where applicable);
+- which step is waiting, what authorized work can still continue, and what the AI will do after the blocker clears.
+
+Make the request concrete and reviewable after completing all independent authorized preparation. Do not ask again for permission already granted or invent a founder gate. If the next step is a secure login request that must be reopened after an uncompleted attempt, state explicitly how Wojtek can request reopening; do not refer him to an expired form or imply that signing in elsewhere authenticates the Work browser. Never infer that a tool result alone proves the request was clearly communicated or that Wojtek intentionally rejected it.
+
+If waiting, say **"Ten krok czeka na Ciebie"** rather than implying work continues on the blocked step or unattended background execution exists. If a status request or `dalej` arrives while the same dependency remains, surface the precise action callout again instead of generating repetitive preparation or tests. Continue other useful, authorized work when available, and describe it accurately.
+
+A blocking action request must also be present in the **final reply** so it cannot disappear when progress commentary is collapsed. When no action is needed, do not create an escalation; state that no action is required only when useful.
+
+This communication contract applies to Adalbird Labs, Grzybołaz, Dymistrz, Wednario and all future company projects. It does not change spending, security, activation or production-test authority.
+
 Prefer **Problem → Evidence → Options → Recommendation → Required decision**. Do not manufacture a decision request when existing authority already permits action.
 
 **Physical-device screenshot-first diagnostics:** for allowlisted clean-state physical UI flows, inspect a privacy-bounded ephemeral failure screenshot before spending multiple cycles on UI-state hypotheses or asking Wojtek to inspect the phone. Keep only the latest relevant failure-state image; never commit it to repositories, documentation or Linear; remove the local copy after diagnostic upload/inspection; use the shortest practical remote retention and delete the remote copy after diagnosis when the connected system exposes safe deletion. If the screenshot is unavailable, unsafe to capture, or still ambiguous, ask Wojtek for a quick screen observation/photo when he is available and state exactly what needs confirmation. If he is unavailable, continue safe autonomous diagnostics rather than blocking the queue. Do not escalate ordinary CI/code failures that Chat can resolve directly. Never request PINs/passwords or weaker security for convenience. Once the visual state is understood, encode it into deterministic automation so the same manual question should not recur.
@@ -296,6 +317,11 @@ Adalbird Labs is an AI-native company. AI roles should act as active organizatio
 Human authority remains explicit for consequential decisions, with **all expenditure reserved exclusively to Wojtek**.
 
 ## Changelog
+
+### v1.40 — 2026-11-07
+- Implemented Founder decision ADL-1085: immediately issue an explicit, prominent Polish action/decision callout whenever progress depends on Wojtek, including exact step/place, reason, active-time estimate, blocked work and AI follow-through.
+- Made the final-reply handoff mandatory, rejected implicit requests via labels/tool forms and misleading progress while waiting, and kept all existing authority/cost/security boundaries unchanged.
+
 
 ### v1.39 — 2026-11-07
 - Corrected Systems & Direct-Access Registry capability evidence under ADL-1083: this Work session successfully discovers native GitHub PR webhook schemas and exposes structured triggers in create/update. Historical normal-Chat 404 evidence is not a permanent account/product capability verdict.
